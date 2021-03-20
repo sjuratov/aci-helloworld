@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "devaksjurainc-2304"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "devaksjurainc-2304"
+  template:
+    metadata:
+      labels:
+        app: "devaksjurainc-2304"
+    spec:
+      containers:
+        - name: "devaksjurainc-2304"
+          image: "devamlacrjurainc.azurecr.io/devaksjurainc"
+          ports:
+          - containerPort: 80
